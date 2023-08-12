@@ -60,7 +60,7 @@ At "Pennies for Pawsitivity," we believe in the power of small contributions to 
 7. Send the request. The expected output should be a "200 OK" success message, and a preview of the new user's details. This screenshot shows each of these steps successfully executed in Insomnia.
 ![Create a new user](screenshots/Create_a_new_user.png)
 #### How to create a new project
-8. From your Insomnia dashboard, create a HTTP Request in the dropdown menu.
+1. From your Insomnia dashboard, create a HTTP Request in the dropdown menu.
 ![New HTTP Request](screenshots/New_HTTP_Request.png)<br />
 
 ### Structure
