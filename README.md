@@ -42,7 +42,7 @@ At "Pennies for Pawsitivity," we believe in the power of small contributions to 
 #### How to register a new user
 1. From your Insomnia dashboard, create a HTTP Request in the dropdown menu.
 ![New HTTP Request](screenshots/New_HTTP_Request.png)
-2. Rename the request to something like "Create a new user".
+2. Rename the request to something like 'Create a new user'.
 ![Rename the HTTP Request](screenshots/Rename_HTTP_Request.png)
 3. Select the GET method from the dropdown.
 ![Select the GET method](screenshots/Select%20the%20GET%20method.png)
