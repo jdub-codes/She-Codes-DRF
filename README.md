@@ -42,22 +42,25 @@ At "Pennies for Pawsitivity," we believe in the power of small contributions to 
 #### How to register a new user
 1. From your Insomnia dashboard, create a HTTP Request in the dropdown menu.
 ![New HTTP Request](screenshots/New_HTTP_Request.png)
-1. Rename the request to something like 'Create a new user'.
+    <br />
+2. Rename the request to something like 'Create a new user'.
+    <br />
 ![Rename the HTTP Request](screenshots/Rename_HTTP_Request.png)
-1. Select the GET method from the dropdown.
+    <br />
+3. Select the GET method from the dropdown.
 ![Select the GET method](screenshots/Select%20the%20GET%20method.png)
-1. Enter "https://penniespawsitivity.fly.dev/users/" in the request URL output.
+4. Enter "https://penniespawsitivity.fly.dev/users/" in the request URL output.
 ![Enter the request URL output](screenshots/Enter_the_request_URL_output.png)
-1. Select JSON as the </>TEXT.
+5. Select JSON as the </>TEXT.
 ![Select JSON](screenshots/Select_JSON.png)
-1. Input data for the new user. For example:<br />
+6. Input data for the new user. For example:<br />
 {<br />
     "username":"JWaller",<br />
     "password":"1234",<br />
     "email":"jdub.dance@icloud.com"<br />
 }<br />
 ![Data for new user](screenshot/../screenshots/Data_for_new_user.png)
-1. Send the request. The expected output should be a "200 OK" success message, and a preview of the new user's details. This screenshot shows each of these steps successfully executed in Insomnia.
+7. Send the request. The expected output should be a "200 OK" success message, and a preview of the new user's details. This screenshot shows each of these steps successfully executed in Insomnia.
 ![Create a new user](screenshots/Create_a_new_user.png)
 #### How to create a new project
 1. From your Insomnia dashboard, create a HTTP Request in the dropdown menu.
