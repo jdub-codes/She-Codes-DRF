@@ -31,46 +31,37 @@ At "Pennies for Pawsitivity," we believe in the power of small contributions to 
 ## Submission requirements
 - [X] A link to the deployed project: [Pennies for Pawsitivity](https://penniespawsitivity.fly.dev/projects/)
 ### Screenshots
-- [X] A screenshot of Insomnia, demonstrating a successful GET method for any endpoint.<br /> 
-<br />This GET method returns all projects. <br />
-<br />
-![Returns all projects](screenshots/Returns_all_projects.png)<br />
-<br />
-- [X] A screenshot of Insomnia, demonstrating a successful POST method for any endpoint.<br /> 
-<br />This POST method shows a the successful creation a new project.<br />
-<br />
-![Create a new project](screenshots/Create_a_new_project.png)<br />
-<br />
+- [X] A screenshot of Insomnia, demonstrating a successful GET method for any endpoint. This GET method returns all projects.<br />
+![Returns all projects](screenshots/Returns_all_projects.png)
+- [X] A screenshot of Insomnia, demonstrating a successful POST method for any endpoint. This POST method shows a the successful creation a new project.<br />
+![Create a new project](screenshots/Create_a_new_project.png)
 - [X] A screenshot of Insomnia, demonstrating a token being returned.<br />
-<br />This shows a token successfully being returned for the user "admin". <br />
-<br />
 ![image info goes here](screenshots/Token_return.png)
 ### Instructions
 - [X] Step by step instructions for how to register a new user and create a newproject (i.e. endpoints and body data).
 #### How to register a new user
-1. From your Insomnia dashboard, create a HTTP Request in the dropdown menu.<br />
-<br />![New HTTP Request](screenshots/New_HTTP_Request.png)<br />
-<br />2. Rename the request to something like "Pennies Pawsitivity: Create a new user".<br />
-<br />![Rename the HTTP Request](screenshots/Rename_HTTP_Request.png)<br />
-<br />3. Select the GET method from the dropdown.<br />
-<br />![Select the GET method](screenshots/Select%20the%20GET%20method.png)<br />
-<br />4. Enter "https://penniespawsitivity.fly.dev/users/" in the request URL output.<br />
-<br />![Enter the request URL output](screenshots/Enter_the_request_URL_output.png)<br />
-<br />5. Select JSON as the </>TEXT.<br />
-<br />![Select JSON](screenshots/Select_JSON.png)<br />
-<br />6. Input data for the new user. For example:<br />
-<br />{<br />
+1. From your Insomnia dashboard, create a HTTP Request in the dropdown menu.
+![New HTTP Request](screenshots/New_HTTP_Request.png)
+1. Rename the request to something like "Pennies Pawsitivity: Create a new user".
+![Rename the HTTP Request](screenshots/Rename_HTTP_Request.png)
+3. Select the GET method from the dropdown.
+![Select the GET method](screenshots/Select%20the%20GET%20method.png)
+4. Enter "https://penniespawsitivity.fly.dev/users/" in the request URL output.
+![Enter the request URL output](screenshots/Enter_the_request_URL_output.png)
+>5. Select JSON as the </>TEXT.<br />
+![Select JSON](screenshots/Select_JSON.png)
+6. Input data for the new user. For example:<br />
+{<br />
     "username":"JWaller",<br />
     "password":"1234",<br />
     "email":"jdub.dance@icloud.com"<br />
 }<br />
-<br />![Data for new user](screenshot/../screenshots/Data_for_new_user.png)<br />
-<br />7. Send the request. The expected output should be a "200 OK" success message, and a preview of the new user's details. This screenshot shows each of these steps successfully executed in Insomnia.<br />
-<br />
-![Create a new user](screenshots/Create_a_new_user.png)<br />
+![Data for new user](screenshot/../screenshots/Data_for_new_user.png)
+7. Send the request. The expected output should be a "200 OK" success message, and a preview of the new user's details. This screenshot shows each of these steps successfully executed in Insomnia.
+![Create a new user](screenshots/Create_a_new_user.png)
 #### How to create a new project
-1. From your Insomnia dashboard, create a HTTP Request in the dropdown menu.<br />
-<br />![New HTTP Request](screenshots/New_HTTP_Request.png)<br />
+1. From your Insomnia dashboard, create a HTTP Request in the dropdown menu.
+![New HTTP Request](screenshots/New_HTTP_Request.png)<br />
 
 ### Structure
 - [X] Your refined API specification and Database Schema.
