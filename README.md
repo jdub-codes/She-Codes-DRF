@@ -28,7 +28,6 @@ At "Pennies for Pawsitivity," we believe in the power of small contributions to 
 - [ ] Implement suitable permissions, e.g. who is allowed to delete a pledge?
 - [X] Return the relevant status codes for both successful and unsuccessful requeststo the API.
 - [X] Use Token Authentication.
-<br />
 ## Submission requirements
 - [X] A link to the deployed project: [Pennies for Pawsitivity](https://penniespawsitivity.fly.dev/projects/)
 ### Screenshots
@@ -85,4 +84,4 @@ At "Pennies for Pawsitivity," we believe in the power of small contributions to 
 | GET | /pledges/1 | Returns a pledge with and ID of "1" | N/A | 200 | Must be logged in<br />Must be the pledge owner
 | DELETE | pledges/1 | Deletes the pledge with and ID of "1" | N/A | 200 | Must be logged in<br />Must be the pledge owner
 #### Database Schema
-![Database Scheme](screenshots/Database_Schema.png)
+![Database Schema](screenshots/Database_Schema.png)
