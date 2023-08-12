@@ -1,8 +1,8 @@
 # Pennies for Pawsitivity
-by Jenny Waller \
-She Codes crowdfunding project - DRF Backend.
+This is a DRF backend project for SheCodes by Jenny Waller.
+
 ## About
-Pennies for Pawsitivity is a crowd funding website for
+Pennies for Pawsitivity is a crowd funding website for cat charities to raise funds.
 ## API Specification
 | HTTP Method | Url | Purpose | Request Body | Successful Response Code | Authentication <br /> Authorization
 | --- | ------- | ------ | ---- | -----| ----|
@@ -10,35 +10,31 @@ Pennies for Pawsitivity is a crowd funding website for
 | POST | projects/ | Create a new project | project object | 201 | User must be logged in. |
 ## Database Schema
 {{ Insert your database schema }}
-![image info goes here](./docs/image.png)
+![image info goes here](screenshots/)
 ## Wireframes
 {{ Insert your wireframes }}
-![image info goes here](./docs/image.png)
+![image info goes here](screenshots/)
 ## Submission Documentation
 {{ Fill this section out for submission }}
-Deployed Project: [Deployed website](https://penniespawsitivity.fly.dev/projects/)
+Deployed Project: [Pennies for Pawsitivity](https://penniespawsitivity.fly.dev/projects/)
 ### How To Run
 {{ What steps to take to run this code }}
-### Updated Database Schema
-![image info goes here](crowdfunding/img/schema.png)
-### Updated Wireframes
-![image info goes here](crowdfunding/img/wireframes.png)
 ### How To Register a New User
 * go to Insomnia
 * set to "post" request
 * use the address "https://penniespawsitivity.fly.dev/users/"
-* In the JSON, input data for the new user:
+* In the JSON, input data for the new user. For example:
 {
-    "username":"type username here",
-    "password":"type password here",
-    "email":"type email address here"
+    "username":"JWaller",
+    "password":"1234",
+    "email":"jdub.dance@icloud.com"
 }
 * Send request, expected output should be a "200 OK" success message, and preview of new user details.
-![image info goes here](img/Create a new user.png)
+![Creat a new user](screenshots/Create_a_new_user.png)
 ### Screenshots
 * A screenshot of Insomnia, demonstrating a successful GET method for any endpoint.
-![image info goes here](crowdfunding/img/GETrequest.png)
+![Returns all projects](screenshots/Returns_all_projects.png)
 * A screenshot of Insomnia, demonstrating a successful POST method for any endpoint.
-![image info goes here](crowdfunding/img/POSTrequest.png)
+![Create a new project](screenshots/Create_a_new_project.png)
 * A screenshot of Insomnia, demonstrating a token being returned.
-![image info goes here](crowdfunding/img/Usertoken.png)
+![image info goes here](screenshots/Token_return.png)
