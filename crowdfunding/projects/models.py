@@ -19,7 +19,7 @@ class Pledge(models.Model):
     comment = models.CharField(max_length=200)
     anonymous = models.BooleanField()
     project = models.ForeignKey(
-        'Pledge',
+        'Project',
         on_delete=models.CASCADE,
         related_name='pledges'
         )
