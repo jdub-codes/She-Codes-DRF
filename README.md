@@ -23,7 +23,7 @@ Welcome to "Pennies for Pawsitivity" – the ultimate crowdfunding platform dedi
   - [X] The supporter/user (i.e. who created the pledge)
   - [X] Whether the pledge is anonymous or not
   - [X] A comment to go along with the pledge
-- [ ] Implement suitable update/delete functionality, e.g. should a project owner beallowed to update a project description?
+- [ ] Implement suitable update/delete functionality, e.g. should a project owner be allowed to update a project description?
 - [ ] Implement suitable permissions, e.g. who is allowed to delete a pledge?
 - [X] Return the relevant status codes for both successful and unsuccessful requeststo the API.
 - [X] Use Token Authentication.
@@ -46,40 +46,56 @@ Welcome to "Pennies for Pawsitivity" – the ultimate crowdfunding platform dedi
     <br />
 ![Rename the HTTP Request](screenshots/Rename_HTTP_Request.png)
     <br />
-3. Select the GET method from the dropdown.
+3. Select the POST method from the dropdown.
     <br />
-![Select the GET method](screenshots/Select_the_GET_method.png)
+![Select the POST method](screenshots/Select_the_POST_method.png)
     <br />
-4. Enter "https://penniespawsitivity.fly.dev/users/" in the request URL output.
+1. Enter "https://penniespawsitivity.fly.dev/users/" in the request URL output.
     <br />
 ![Enter the request URL output](screenshots/Enter_the_request_URL_output.png)
     <br />
-5. Select JSON as the </>TEXT.
+1. Select JSON as the </>TEXT.
     <br />
 ![Select JSON](screenshots/Select_JSON.png)
     <br />
-6. Input data for the new user, entering a username, password and email. For example:<br />
+1. Input data for the new user, entering a username, password and email. For example:<br />
 {<br />
     "username":"JWaller",<br />
     "password":"1234",<br />
     "email":"jdub.dance@icloud.com"<br />
 }<br />
-![Data for new user](screenshot/../screenshots/Data_for_new_user.png)
+![Data for new user](screenshots/Data_for_new_user.png)
     <br />
-7. Send the request. The expected output should be a "200 OK" success message, and a preview of the new user's details. This screenshot shows each of these steps successfully executed in Insomnia.
+1. Send the request. The expected output should be a "200 OK" success message, and a preview of the new user's details. This screenshot shows each of these steps successfully executed in Insomnia.
     <br />
-![Create a new user](screenshots/Create_a_new_user.png)
+![Create a new user](screenshots/Create_a_new_user_success.png)
 #### How to create a new project
 1. From your Insomnia dashboard, create a HTTP Request in the dropdown menu.
 ![New HTTP Request](screenshots/New_HTTP_Request.png)
-2. Rename the request to something like 'Create a new project'.
+1. Rename the request to something like 'Create a new project'.
     <br />
 ![Rename the HTTP Request](screenshots/Rename_HTTP_Request.png)
-3. Select the POST method from the dropdown.
+1. Select the POST method from the dropdown.
     <br />
 ![Select the POST method](screenshots/Select_the_POST_method.png)
-4. Enter "https://penniespawsitivity.fly.dev/users/" in the request URL output.
-
+1. Enter "https://penniespawsitivity.fly.dev/projects" in the request URL output.
+   <br />
+![Enter the request URL output](screenshots/Enter_the_request_URL_output_projects.png)
+    <br />
+1. Input data for the new project. For example:<br />
+{<br />
+	"id": 1,<br />
+	"owner": 1,<br />
+	"title": "Project one",<br />
+	"description": "The first project.",<br />
+	"goal": 150,<br />
+	"image": "https://via.placeholder.com/300.jpg",<br />
+	"is_open": true,<br />
+	"date_created": "2020-03-20T14:28:23.382748Z"<br />
+}<br />
+![Data for new project](screenshots/Data_for_new_project.png)
+1. Send the request. The expected output should be a "201 Created" success message, and a preview of the new project's details. This screenshot shows each of these steps successfully executed in Insomnia.
+![Create a new project](screenshots/Create_a_new_project_success.png)
 ### Structure
 - [X] Your refined API specification and Database Schema.
 #### API Specification 
