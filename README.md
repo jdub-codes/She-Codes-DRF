@@ -23,8 +23,6 @@ Welcome to "Pennies for Pawsitivity" – the ultimate crowdfunding platform dedi
   - [X] The supporter/user (i.e. who created the pledge)
   - [X] Whether the pledge is anonymous or not
   - [X] A comment to go along with the pledge
-- [ ] Implement suitable update/delete functionality, e.g. should a project owner be allowed to update a project description?
-- [ ] Implement suitable permissions, e.g. who is allowed to delete a pledge?
 - [X] Return the relevant status codes for both successful and unsuccessful requeststo the API.
 - [X] Use Token Authentication.
 ## Submission requirements
