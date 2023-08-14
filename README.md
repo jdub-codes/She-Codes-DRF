@@ -30,7 +30,7 @@ Welcome to "Pennies for Pawsitivity" – the ultimate crowdfunding platform dedi
 ### Screenshots
 - [X] A screenshot of Insomnia, demonstrating a successful GET method for any endpoint. This GET method returns all projects.<br />
 ![Returns all projects](screenshots/Returns_all_projects.png)
-- [X] A screenshot of Insomnia, demonstrating a successful POST method for any endpoint. This POST method shows a the successful creation a new project.<br />
+- [X] A screenshot of Insomnia, demonstrating a successful POST method for any endpoint. This POST method shows the successful creation a new project.<br />
 ![Create a new project](screenshots/Create_a_new_project.png)
 - [X] A screenshot of Insomnia, demonstrating a token being returned.<br />
 ![image info goes here](screenshots/Token_return.png)
