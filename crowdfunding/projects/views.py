@@ -4,8 +4,7 @@ from .models import Project, Pledge
 from .serializers import ProjectSerializer, PledgeSerializer, ProjectDetailSerializer, PledgeDetailSerializer
 from django.http import Http404
 from rest_framework import status, permissions
-from .permissions import IsOwnerOrReadOnly, IsSupporterOrReadOnly
-from rest_framework.permissions import IsAdminUser
+from .permissions import IsOwnerOrReadOnly
 
 class ProjectList(APIView):
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
@@ -13,10 +12,7 @@ class ProjectList(APIView):
     def get(self, request):
         projects = Project.objects.all()
         serializer = ProjectSerializer(projects, many=True)
-        return Response(
-                serializer.data, 
-                status=status.HTTP_200_OK
-            )
+        return Response(serializer.data)
 
     def post(self, request):
         serializer = ProjectSerializer(data=request.data)
@@ -33,8 +29,8 @@ class ProjectList(APIView):
 
 class ProjectDetail(APIView):
     permission_classes = [
-        # permissions.IsAuthenticatedOrReadOnly,
-        IsOwnerOrReadOnly|IsAdminUser
+        permissions.IsAuthenticatedOrReadOnly,
+        IsOwnerOrReadOnly
         ]
 
     def get_object(self, pk):
@@ -48,10 +44,7 @@ class ProjectDetail(APIView):
     def get(self, request, pk):
         project = self.get_object(pk)
         serializer = ProjectDetailSerializer(project)
-        return Response(
-            serializer.data,
-            status=status.HTTP_200_OK
-        )
+        return Response(serializer.data)
     
     def put(self, request, pk):
         project = self.get_object(pk)
@@ -62,25 +55,12 @@ class ProjectDetail(APIView):
         )
         if serializer.is_valid():
             serializer.save()
-        return Response(
-            serializer.data,
-            status=status.HTTP_200_OK
-        )
-    
-    def delete(self, request, pk):
-        project = self.get_object(pk)
-        project.delete()
-        return Response(status=status.HTTP_200_OK)
 
 class PledgeList(APIView):
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     def get(self, request):
         pledges = Pledge.objects.all()
         serializer = PledgeSerializer(pledges, many=True)
-        return Response(
-            serializer.data,
-            status=status.HTTP_200_OK
-        )
+        return Response(serializer.data)
     
     def post(self, request):
         serializer = PledgeSerializer(data=request.data)
@@ -97,8 +77,8 @@ class PledgeList(APIView):
 
 class PledgeDetail(APIView):
     permission_classes = [
-        # permissions.IsAuthenticatedOrReadOnly,
-        IsSupporterOrReadOnly|IsAdminUser
+        permissions.IsAuthenticatedOrReadOnly,
+        IsOwnerOrReadOnly
         ]
 
     def get_object(self, pk):
@@ -112,10 +92,7 @@ class PledgeDetail(APIView):
     def get(self, request, pk):
         project = self.get_object(pk)
         serializer = PledgeDetailSerializer(project)
-        return Response(
-            serializer.data,
-            status=status.HTTP_200_OK
-        )
+        return Response(serializer.data)
     
     def put(self, request, pk):
         pledge = self.get_object(pk)
@@ -126,30 +103,3 @@ class PledgeDetail(APIView):
         )
         if serializer.is_valid():
             serializer.save()
-            return Response(
-                serializer.data,
-                status=status.HTTP_200_OK
-            )
-    
-    def delete(self, request, pk):
-        pledge = self.get_object(pk)
-        pledge.delete()
-        return Response(status=status.HTTP_200_OK)
-
-class UserProjectList(APIView):
-    permission_classes = [permissions.IsAuthenticated]
-
-    def get(self, request):
-        # use filter to get request.user projects
-        projects = Project.objects.filter(owner=request.user)
-        serializer = ProjectSerializer(projects, many=True)
-        return Response(serializer.data, status=status.HTTP_200_OK)
-
-
-class UserPledgeList(APIView):
-    permission_classes = [permissions.IsAuthenticated]
-
-    def get(self,request):
-        pledges = Pledge.objects.filter(supporter= request.user)
-        serializer = PledgeSerializer(pledges,many=True)
-        return Response(serializer.data, status=status.HTTP_200_OK)
